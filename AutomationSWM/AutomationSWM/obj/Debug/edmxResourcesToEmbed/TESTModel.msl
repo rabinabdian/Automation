@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AutomationDBModelStoreContainer" CdmEntityContainer="AutomationDBEntities">
+    <EntitySetMapping Name="TEST_STATUS_TB">
+      <EntityTypeMapping TypeName="AutomationDBModel.TEST_STATUS_TB">
+        <MappingFragment StoreEntitySet="TEST_STATUS_TB">
+          <ScalarProperty Name="HOST" ColumnName="HOST" />
+          <ScalarProperty Name="Creation_Time" ColumnName="Creation_Time" />
+          <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="ERROR_DETAILS" ColumnName="ERROR_DETAILS" />
+          <ScalarProperty Name="COMPONENT_ID" ColumnName="COMPONENT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

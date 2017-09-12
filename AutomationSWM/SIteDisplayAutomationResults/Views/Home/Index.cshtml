@@ -1,0 +1,77 @@
+﻿@model IEnumerable<SIteDisplayAutomationResults.TEST_STATUS_TB>
+
+@{
+    ViewBag.Title = "Automation Test Results";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Automation Test Results</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div>
+    <table class="table" border="1">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Creation_Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Test_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ACTION)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.STATUS)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.COMPONENT_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HOST)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ERROR_DETAILS)
+            </th>
+
+            @*<th></th>*@
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr id="greetings">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Creation_Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Test_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ACTION)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.STATUS)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.COMPONENT_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HOST)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ERROR_DETAILS)
+                </td>
+
+                @*<td>
+                        @Html.ActionLink("Edit", "Edit", new { id=item.Test_ID }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.Test_ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.Test_ID })
+                    </td>*@
+            </tr>
+        }
+
+    </table>
+</div>

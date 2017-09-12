@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AutomationDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TEST_STATUS_TB">
+    <Key>
+      <PropertyRef Name="Test_ID" />
+    </Key>
+    <Property Name="Test_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ACTION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ERROR_DETAILS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="COMPONENT_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Creation_Time" Type="DateTime" Precision="3" />
+    <Property Name="HOST" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="AutomationDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TEST_STATUS_TB" EntityType="Self.TEST_STATUS_TB" />
+  </EntityContainer>
+</Schema>
