@@ -7,6 +7,22 @@
 
 <h2>Automation Test Results</h2>
 
+<script>
+
+    $(function () {
+        $("tr").each(function () {
+            var col_val = $(this).find("td:eq(1)").text();
+            if (col_val == "PASS") {
+                $(this).addClass('PASS');  //the selected class colors the row green//
+            } else {
+                $(this).addClass('FAIL');
+            }
+        });
+    });
+
+</script>
+
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -39,39 +55,42 @@
             @*<th></th>*@
         </tr>
 
-        @foreach (var item in Model)
-        {
-            <tr id="greetings">
-                <td>
-                    @Html.DisplayFor(modelItem => item.Creation_Time)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Test_ID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ACTION)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.STATUS)
-                </td>
+                @foreach (var item in Model)
+                {
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.COMPONENT_ID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.HOST)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ERROR_DETAILS)
-                </td>
+                 
+                 <tr id="greetings" class=@item.STATUS>
 
-                @*<td>
-                        @Html.ActionLink("Edit", "Edit", new { id=item.Test_ID }) |
-                        @Html.ActionLink("Details", "Details", new { id=item.Test_ID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id=item.Test_ID })
-                    </td>*@
-            </tr>
-        }
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Creation_Time)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Test_ID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ACTION)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.STATUS)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.COMPONENT_ID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.HOST)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ERROR_DETAILS)
+                            </td>
+
+                            @*<td>
+                                @Html.ActionLink("Edit", "Edit", new { id=item.Test_ID }) |
+                                @Html.ActionLink("Details", "Details", new { id=item.Test_ID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id=item.Test_ID })
+                            </td>*@
+                        </tr>
+            }
 
     </table>
 </div>

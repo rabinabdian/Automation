@@ -32,3 +32,37 @@ C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationSWM\Automation
 C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.dll
 C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.pdb
 C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationSWM\AutomationSWM\bin\Debug\YuriyGuts.RegexBuilder.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\phantomjs.exe
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\chromedriver.exe
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\chromedriver-license.txt
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\phantomjs-license.txt
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\AutomationSWM.dll.config
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\AutomationSWM.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\AutomationSWM.pdb
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\EntityFramework.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Ionic.Zip.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Selenium.Helper.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\ThoughtWorks.Selenium.Core.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\WebDriver.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\WebDriver.Support.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\XmlSampleGenerator.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\YuriyGuts.RegexBuilder.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\EntityFramework.xml
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\ThoughtWorks.Selenium.Core.xml
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\WebDriver.xml
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\WebDriver.Support.xml
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.csprojResolveAssemblyReference.cache
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.dll
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.pdb
