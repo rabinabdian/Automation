@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -117,8 +118,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="TESTModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TESTModel.Context.cs</LastGenOutput>
       <DependentUpon>TESTModel.edmx</DependentUpon>
+      <LastGenOutput>TESTModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="TESTModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -156,6 +157,10 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <EntityDeploy Include="TESTModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TESTModel.Designer.cs</LastGenOutput>
@@ -163,10 +168,6 @@
     <Content Include="TESTModel.edmx.diagram">
       <DependentUpon>TESTModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

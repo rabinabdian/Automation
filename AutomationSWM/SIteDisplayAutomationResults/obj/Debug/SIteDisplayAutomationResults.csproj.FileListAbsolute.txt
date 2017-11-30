@@ -100,3 +100,4 @@ C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\SIteDisplayAutomatio
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\SIteDisplayAutomationResults\obj\Debug\SIteDisplayAutomationResults.csprojResolveAssemblyReference.cache
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\SIteDisplayAutomationResults\obj\Debug\SIteDisplayAutomationResults.dll
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\SIteDisplayAutomationResults\obj\Debug\SIteDisplayAutomationResults.pdb
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\SIteDisplayAutomationResults\obj\Debug\SIteDisplayAutomationResults.csproj.CoreCompileInputs.cache

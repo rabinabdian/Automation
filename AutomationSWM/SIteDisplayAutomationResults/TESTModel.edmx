@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="AutomationDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="AutomationDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="TEST_STATUS_TB">
           <Key>
             <PropertyRef Name="Test_ID" />
@@ -12,15 +12,16 @@
           <Property Name="Test_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ACTION" Type="nvarchar" MaxLength="50" />
           <Property Name="STATUS" Type="nchar" MaxLength="10" />
-          <Property Name="ERROR_DETAILS" Type="text" />
+          <Property Name="ERROR_DETAILS" Type="varchar(max)" />
           <Property Name="COMPONENT_ID" Type="nvarchar" MaxLength="50" />
           <Property Name="Creation_Time" Type="datetime" />
-          <Property Name="HOST" Type="text" />
+          <Property Name="HOST" Type="varchar(max)" />
         </EntityType>
         <EntityContainer Name="AutomationDBModelStoreContainer">
           <EntitySet Name="TEST_STATUS_TB" EntityType="Self.TEST_STATUS_TB" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AutomationDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -48,13 +49,13 @@
           <EntitySetMapping Name="TEST_STATUS_TB">
             <EntityTypeMapping TypeName="AutomationDBModel.TEST_STATUS_TB">
               <MappingFragment StoreEntitySet="TEST_STATUS_TB">
-                <ScalarProperty Name="HOST" ColumnName="HOST" />
-                <ScalarProperty Name="Creation_Time" ColumnName="Creation_Time" />
                 <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
                 <ScalarProperty Name="ACTION" ColumnName="ACTION" />
                 <ScalarProperty Name="STATUS" ColumnName="STATUS" />
                 <ScalarProperty Name="ERROR_DETAILS" ColumnName="ERROR_DETAILS" />
                 <ScalarProperty Name="COMPONENT_ID" ColumnName="COMPONENT_ID" />
+                <ScalarProperty Name="Creation_Time" ColumnName="Creation_Time" />
+                <ScalarProperty Name="HOST" ColumnName="HOST" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

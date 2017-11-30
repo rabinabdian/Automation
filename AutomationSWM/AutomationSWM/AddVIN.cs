@@ -13,27 +13,10 @@ namespace AutomationSWM
         IWebDriver driver;
         string username = "swmuser";
         string password = "swmPassword1";
-        string urlAdrr = SiteUrl.GetString(SiteUrl.url.star34R);
+        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters1);
 
         CreateLogMessage log = new CreateLogMessage();
-        //ReportEx rep = new ReportEx();
-
-        // ExtentReports report = new ExtentReports(@"C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationTesting\SoftwareTest\report.html");
-
-        //public ExtentReports extent;
-        //public ExtentTest test;
-
-
-
-        //[OneTimeSetUp]
-        // public void StartReport ()
-        // {
-        //     string pth = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
-        //     string actualPath = pth.Substring(0, pth.LastIndexOf("bin"));
-        //     string projectPath = new Uri(actualPath).LocalPath;
-
-
-        // }
+       
 
 
         [TestInitialize]
@@ -46,11 +29,12 @@ namespace AutomationSWM
 
             Thread.Sleep(5000);
             driver.FindElement(By.Name("username")).SendKeys(username);
-            driver.FindElement(By.Name("password")).SendKeys(password);
+            //Thread.Sleep(5000);
+            driver.FindElement(By.Id("inputPassword")).SendKeys(password);
             driver.FindElement(By.XPath("/html/body/app-root/app-auth/app-auth-sign-in/div/div/form/div[2]/button")).Click();
 
             Thread.Sleep(5000);
-            driver.FindElement(By.XPath("//i[contains(@class,'icon-harman_logo')]")).Click();
+           // driver.FindElement(By.XPath("//i[contains(@class,'logo')]")).Click();
 
 
         }
@@ -58,8 +42,7 @@ namespace AutomationSWM
         [TestMethod]
         public void Add_New_Vehicle()
         {
-            for (int i = 0; i < 1000; i++)
-            {
+           
                 Vehicle v = new Vehicle();
 
 
@@ -68,7 +51,7 @@ namespace AutomationSWM
                 try
                 {
 
-                    //driver.FindElement(By.XPath("//*[@id='dashboardItems']/div[2]/div/div[2]/div/a")).Click();
+                    driver.FindElement(By.XPath("//*[@id='dashboardItems']/div[2]/div/div[2]/div/a")).Click();
 
 
 
@@ -118,7 +101,7 @@ namespace AutomationSWM
                     //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");
 
                 }
-            }
+            
 
         }
 

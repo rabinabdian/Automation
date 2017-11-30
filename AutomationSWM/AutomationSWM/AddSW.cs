@@ -14,7 +14,7 @@ namespace AutomationSWM
         string username = "swmuser";
         string password = "swmPassword1";
        
-        string urlAdrr = SiteUrl.GetString(SiteUrl.url.star34R);
+        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters1);
         CreateLogMessage log = new CreateLogMessage();
 
         [TestInitialize]

@@ -15,7 +15,7 @@ namespace AutomationSWM
     public class CreateLogMessage
     {
 
-       
+      
         AutomationDBEntities db = new AutomationDBEntities();
 
 
@@ -25,14 +25,14 @@ namespace AutomationSWM
 
            
 
-            File.AppendAllText(@"C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationTesting\SoftwareTest\Log.txt",
+            File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt",
                                 "TEST_ID: " + DT + " ---- " + host + " -------" + msg + " -------------" + " Date :" + DateTime.Now.ToString()
                                 + "----------------------------------------" +
                               Environment.NewLine + "Message :" + ex.Message + "<br/>" + Environment.NewLine + "StackTrace :" + ex.StackTrace +
                       "" + Environment.NewLine);
             string New = Environment.NewLine + "-----------------------------------------------------------------------------" + Environment.NewLine;
-            File.AppendAllText(@"C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationTesting\SoftwareTest\Log.txt", New);
-
+            File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt", New);
+            /*C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationTesting\SoftwareTest\Log.txt*/
             AddErrorToDB(ex, msg, component_id, host, DT);
 
         }
@@ -63,7 +63,7 @@ namespace AutomationSWM
            
 
           
-            File.AppendAllText(@"C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationTesting\SoftwareTest\Log.txt",
+            File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt",
                               "TEST_ID: " + DT + " ---- " + host + " -------" + "Add New VIN Test " + " Date :" + DateTime.Now.ToString()
                               + "----------------------------------------" +
                                Environment.NewLine + "Message :" + "Vehicle " + v.VIN + " Created Successfully "
@@ -78,7 +78,7 @@ namespace AutomationSWM
 
           
 
-            File.AppendAllText(@"C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationTesting\SoftwareTest\Log.txt",
+            File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt",
                              "TEST_ID: " + DT + " ---- " + host + " -------" + "Add New Software Test " + " Date :" + DateTime.Now.ToString()
                              + "----------------------------------------" +
                               Environment.NewLine + "Message :" + "Software " + camp.Name + " Created Successfully "
@@ -95,7 +95,7 @@ namespace AutomationSWM
 
            
 
-            File.AppendAllText(@"C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationTesting\SoftwareTest\Log.txt",
+            File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt",
                              "TEST_ID: " + DT + " ---- " + host + " -------" + "Add New USER Test " + " Date :" + DateTime.Now.ToString()
                               + "----------------------------------------" +
                                Environment.NewLine + "Message :" + "Vehicle " + u.UserName + " Created Successfully "
@@ -109,7 +109,7 @@ namespace AutomationSWM
             string DT = DateTime.Now.ToFileTime().ToString();
            
 
-            File.AppendAllText(@"C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationTesting\SoftwareTest\Log.txt",
+            File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt",
                              "TEST_ID: " + DT + " ---- " + host + " -------" + "Add New Software Test " + " Date :" + DateTime.Now.ToString()
                              + "----------------------------------------" +
                               Environment.NewLine + "Message :" + "Software " + sw.softwareName + " Created Successfully "
@@ -166,13 +166,13 @@ namespace AutomationSWM
 
         private void ExceptionMessage(Exception ex)
         {
-            File.AppendAllText(@"C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationTesting\SoftwareTest\Log.txt",
+            File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt",
                               "Exception ERROR-----"+" Date :" + DateTime.Now.ToString()
                                + "----------------------------------------" +
                              Environment.NewLine + "Message :" + ex.Message + "<br/>" + Environment.NewLine + "StackTrace :" + ex.StackTrace +
                      "" + Environment.NewLine);
             string New = Environment.NewLine + "-----------------------------------------------------------------------------" + Environment.NewLine;
-            File.AppendAllText(@"C:\Users\ravdaian\documents\visual studio 2017\Projects\AutomationTesting\SoftwareTest\Log.txt", New);
+            File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt", New);
 
         }
     }
