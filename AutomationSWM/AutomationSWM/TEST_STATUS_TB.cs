@@ -21,5 +21,6 @@ namespace AutomationSWM
         public string COMPONENT_ID { get; set; }
         public Nullable<System.DateTime> Creation_Time { get; set; }
         public string HOST { get; set; }
+        public byte[] IMAGE { get; set; }
     }
 }

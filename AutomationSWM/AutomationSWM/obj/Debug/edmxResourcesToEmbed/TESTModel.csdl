@@ -11,6 +11,7 @@
     <Property Name="COMPONENT_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Creation_Time" Type="DateTime" Precision="3" />
     <Property Name="HOST" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IMAGE" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityContainer Name="AutomationDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="TEST_STATUS_TB" EntityType="Self.TEST_STATUS_TB" />

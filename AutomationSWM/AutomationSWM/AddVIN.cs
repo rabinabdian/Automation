@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Threading;
+using System.Drawing.Imaging;
+using System.Drawing;
+using System.IO;
 
 namespace AutomationSWM
 {
@@ -14,7 +17,7 @@ namespace AutomationSWM
         string username = "swmuser";
         string password = "swmPassword1";
         string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters1);
-
+        string DT = DateTime.Now.ToFileTime().ToString();
         CreateLogMessage log = new CreateLogMessage();
        
 
@@ -56,7 +59,7 @@ namespace AutomationSWM
 
 
                     // choose OS
-                    driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
+                    driver.FindElement(By.Name("viin")).SendKeys(v.VIN);
                     driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
                     driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
 
@@ -86,7 +89,7 @@ namespace AutomationSWM
                         goto WaitForSaveButtonUntilVisible;
                     }
 
-                    log.VINSuccedMessage(v,urlAdrr);
+                    log.VINSuccedMessage(v,urlAdrr,DT);
                     //rep.Pass("Add New SoftWare Passed", "New SoftWare Creation Passed");
 
                     Thread.Sleep(2000);
@@ -96,8 +99,29 @@ namespace AutomationSWM
                 }
                 catch (Exception ex)
                 {
+                Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
+                //                var image = new ImageEntity()
+                //                {
+                //                    Content = imageToByteArray(image)
+                //                }
+                //_Context.Images.Add(image);
+                //                _Context.SaveChanges();
 
-                    log.ExceptionMessage(ex, "Add Vehicle Failure",v.VIN,urlAdrr);
+                //.SaveAsFile
+
+               // string filename = Path.Combine(Path.GetTempPath(), Guid.NewGuid() + ".jpg");
+
+                string fileName = DT + ".png";
+                
+                ss.SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\"+ fileName, ImageFormat.Png);
+
+
+                   // sample.png"
+
+              
+
+
+                log.ExceptionMessage(ex, "Add Vehicle Failure",v.VIN,urlAdrr,DT);
                     //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");
 
                 }

@@ -19,9 +19,9 @@ namespace AutomationSWM
         AutomationDBEntities db = new AutomationDBEntities();
 
 
-        public void ExceptionMessage(Exception ex, string msg ,string component_id , string host )
+        public void ExceptionMessage(Exception ex, string msg ,string component_id , string host,string DT )
         {
-            string DT = DateTime.Now.ToFileTime().ToString();
+           
 
            
 
@@ -56,10 +56,10 @@ namespace AutomationSWM
         }
 
 
-        public void VINSuccedMessage(Vehicle v , string host)
+        public void VINSuccedMessage(Vehicle v , string host,string DT)
         {
 
-            string DT = DateTime.Now.ToFileTime().ToString();
+            
            
 
           

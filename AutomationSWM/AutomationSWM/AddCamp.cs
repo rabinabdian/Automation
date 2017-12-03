@@ -13,6 +13,7 @@ namespace AutomationSWM
         IWebDriver driver;
         string username = "swmuser";
         string password = "swmPassword1";
+        string DT = DateTime.Now.ToFileTime().ToString();
         string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters1);
         CreateLogMessage log = new CreateLogMessage();
 
@@ -66,7 +67,7 @@ namespace AutomationSWM
             catch (Exception ex)
             {
 
-                log.ExceptionMessage(ex, "Add Campaign Failure", camp.Name,urlAdrr);
+                log.ExceptionMessage(ex, "Add Campaign Failure", camp.Name,urlAdrr,DT);
             }
 
           

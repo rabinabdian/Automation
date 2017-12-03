@@ -12,7 +12,7 @@ namespace AutomationSWM
         IWebDriver driver;
         string username = "swmuser";
         string password = "swmPassword1";
-       
+        string DT = DateTime.Now.ToFileTime().ToString();
         string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters1);
 
           
@@ -108,7 +108,7 @@ namespace AutomationSWM
                 catch (Exception ex)
                 {
 
-                    log.ExceptionMessage(ex, "Add User Failure",u.UserName,urlAdrr);
+                    log.ExceptionMessage(ex, "Add User Failure",u.UserName,urlAdrr,DT);
                     //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");
 
                 }

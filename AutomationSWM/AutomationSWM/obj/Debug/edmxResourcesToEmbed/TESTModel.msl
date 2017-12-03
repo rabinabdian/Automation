@@ -4,6 +4,7 @@
     <EntitySetMapping Name="TEST_STATUS_TB">
       <EntityTypeMapping TypeName="AutomationDBModel.TEST_STATUS_TB">
         <MappingFragment StoreEntitySet="TEST_STATUS_TB">
+          <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
           <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
           <ScalarProperty Name="ACTION" ColumnName="ACTION" />
           <ScalarProperty Name="STATUS" ColumnName="STATUS" />
