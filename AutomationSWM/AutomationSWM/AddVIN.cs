@@ -6,6 +6,7 @@ using System.Threading;
 using System.Drawing.Imaging;
 using System.Drawing;
 using System.IO;
+using OpenQA.Selenium.Support.Extensions;
 
 namespace AutomationSWM
 {
@@ -99,26 +100,9 @@ namespace AutomationSWM
                 }
                 catch (Exception ex)
                 {
-                Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
-                //                var image = new ImageEntity()
-                //                {
-                //                    Content = imageToByteArray(image)
-                //                }
-                //_Context.Images.Add(image);
-                //                _Context.SaveChanges();
 
-                //.SaveAsFile
+                driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
 
-               // string filename = Path.Combine(Path.GetTempPath(), Guid.NewGuid() + ".jpg");
-
-                string fileName = DT + ".png";
-                
-                ss.SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\"+ fileName, ImageFormat.Png);
-
-
-                   // sample.png"
-
-              
 
 
                 log.ExceptionMessage(ex, "Add Vehicle Failure",v.VIN,urlAdrr,DT);
