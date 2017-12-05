@@ -7,6 +7,7 @@ using System.Drawing.Imaging;
 using System.Drawing;
 using System.IO;
 using OpenQA.Selenium.Support.Extensions;
+using System.Xml.Linq;
 
 namespace AutomationSWM
 {
@@ -17,7 +18,7 @@ namespace AutomationSWM
         IWebDriver driver;
         string username = "swmuser";
         string password = "swmPassword1";
-        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters1);
+        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters5);
         string DT = DateTime.Now.ToFileTime().ToString();
         CreateLogMessage log = new CreateLogMessage();
        
@@ -60,7 +61,7 @@ namespace AutomationSWM
 
 
                     // choose OS
-                    driver.FindElement(By.Name("viin")).SendKeys(v.VIN);
+                    driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
                     driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
                     driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
 
@@ -73,9 +74,10 @@ namespace AutomationSWM
                     driver.FindElement(By.XPath("//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]")).Click();
 
 
+                driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
 
-                    driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
-                    Thread.Sleep(5000);
+                //   driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
+                Thread.Sleep(5000);
 
 
 
@@ -93,17 +95,17 @@ namespace AutomationSWM
                     log.VINSuccedMessage(v,urlAdrr,DT);
                     //rep.Pass("Add New SoftWare Passed", "New SoftWare Creation Passed");
 
-                    Thread.Sleep(2000);
+                    Thread.Sleep(1000);
 
-                    driver.FindElement(By.XPath("//i[contains(@class,'icon-harman_logo')]")).Click();
+                   // driver.FindElement(By.XPath("//i[contains(@class,'icon-harman_logo')]")).Click();
 
                 }
                 catch (Exception ex)
                 {
 
-                driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
 
 
+               driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
 
                 log.ExceptionMessage(ex, "Add Vehicle Failure",v.VIN,urlAdrr,DT);
                     //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");

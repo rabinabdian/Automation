@@ -5,6 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.Extensions;
+using System.Drawing.Imaging;
 
 namespace AutomationSWM
 {
@@ -19,9 +22,9 @@ namespace AutomationSWM
         AutomationDBEntities db = new AutomationDBEntities();
 
 
-        public void ExceptionMessage(Exception ex, string msg ,string component_id , string host,string DT )
+        public void ExceptionMessage(Exception ex, string msg ,string component_id , string host,string DT)
         {
-           
+
 
            
 
@@ -86,6 +89,8 @@ namespace AutomationSWM
 
             AddSuccessMsgToDB(camp.Name, host, DT, ACTION.Add_New_Campaign.ToString());
         }
+
+        
 
         public void USERSuccedMessage(USER u,string host)
         {
