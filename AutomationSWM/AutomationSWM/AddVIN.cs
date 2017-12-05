@@ -8,6 +8,8 @@ using System.Drawing;
 using System.IO;
 using OpenQA.Selenium.Support.Extensions;
 using System.Xml.Linq;
+using System.Security.Policy;
+using System.Linq;
 
 namespace AutomationSWM
 {
@@ -33,7 +35,7 @@ namespace AutomationSWM
             driver.Manage().Window.Maximize();
 
             Thread.Sleep(5000);
-            driver.FindElement(By.Name("username")).SendKeys(username);
+            driver.FindElement(By.Name("usernamee")).SendKeys(username);
             //Thread.Sleep(5000);
             driver.FindElement(By.Id("inputPassword")).SendKeys(password);
             driver.FindElement(By.XPath("/html/body/app-root/app-auth/app-auth-sign-in/div/div/form/div[2]/button")).Click();
@@ -103,9 +105,13 @@ namespace AutomationSWM
                 catch (Exception ex)
                 {
 
+              
+
+                driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
+
+       
 
 
-               driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
 
                 log.ExceptionMessage(ex, "Add Vehicle Failure",v.VIN,urlAdrr,DT);
                     //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");

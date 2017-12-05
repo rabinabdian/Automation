@@ -16,7 +16,7 @@
           <Property Name="COMPONENT_ID" Type="nvarchar" MaxLength="50" />
           <Property Name="Creation_Time" Type="datetime" />
           <Property Name="HOST" Type="varchar(max)" />
-          <Property Name="IMAGE" Type="image" />
+          <Property Name="IMAGE" Type="varbinary(max)" />
         </EntityType>
         <EntityContainer Name="AutomationDBModelStoreContainer">
           <EntitySet Name="TEST_STATUS_TB" EntityType="Self.TEST_STATUS_TB" Schema="dbo" store:Type="Tables" />

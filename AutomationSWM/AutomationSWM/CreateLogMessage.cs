@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Extensions;
 using System.Drawing.Imaging;
+using System.Drawing;
 
 namespace AutomationSWM
 {
@@ -22,7 +23,7 @@ namespace AutomationSWM
         AutomationDBEntities db = new AutomationDBEntities();
 
 
-        public void ExceptionMessage(Exception ex, string msg ,string component_id , string host,string DT)
+        public void ExceptionMessage(Exception ex, string msg ,string component_id , string host,string DT /*,Image imageName*/)
         {
 
 
@@ -40,7 +41,7 @@ namespace AutomationSWM
 
         }
 
-        private void AddErrorToDB(Exception ex, string msg, string component_id, string host, string DT)
+        private void AddErrorToDB(Exception ex, string msg, string component_id, string host, string DT /*, Image imageName*/)
         {
             TEST_STATUS_TB tb = new TEST_STATUS_TB
             {
@@ -50,14 +51,31 @@ namespace AutomationSWM
                 ERROR_DETAILS = ex.Message,
                 COMPONENT_ID = component_id,
                 Creation_Time = DateTime.Now,
-                HOST = host
+                HOST = host,
+               /* IMAGE = imageToByteArray(imageName)*/
 
             };
             db.TEST_STATUS_TB.Add(tb);
             db.SaveChanges();
             db.Dispose();
+
+           
+
         }
 
+        public byte[] imageToByteArray(Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, ImageFormat.Png);
+            return ms.ToArray();
+        }
+        
+        public Image byteArrayToImage(byte byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }
 
         public void VINSuccedMessage(Vehicle v , string host,string DT)
         {
@@ -135,6 +153,8 @@ namespace AutomationSWM
                 COMPONENT_ID = componentName,
                 Creation_Time = DateTime.Now,
                 HOST = host
+            
+                
             };
             db.TEST_STATUS_TB.Add(tb);
             db.SaveChanges();
