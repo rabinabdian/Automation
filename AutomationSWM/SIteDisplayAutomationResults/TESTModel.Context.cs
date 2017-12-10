@@ -26,5 +26,6 @@ namespace SIteDisplayAutomationResults
         }
     
         public virtual DbSet<TEST_STATUS_TB> TEST_STATUS_TB { get; set; }
+        public virtual DbSet<Picture> Pictures { get; set; }
     }
 }

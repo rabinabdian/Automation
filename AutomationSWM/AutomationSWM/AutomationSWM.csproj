@@ -94,6 +94,9 @@
     <Compile Include="Campaign.cs" />
     <Compile Include="CreateLogMessage.cs" />
     <Compile Include="Initializer.cs" />
+    <Compile Include="Picture.cs">
+      <DependentUpon>TESTModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="SiteUrl.cs" />
     <Compile Include="Software.cs" />
     <Compile Include="AddSW.cs" />

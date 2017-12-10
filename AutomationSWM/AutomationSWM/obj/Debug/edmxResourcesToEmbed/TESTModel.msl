@@ -15,5 +15,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Pictures">
+      <EntityTypeMapping TypeName="AutomationDBModel.Picture">
+        <MappingFragment StoreEntitySet="Pictures">
+          <ScalarProperty Name="PictureData" ColumnName="PictureData" />
+          <ScalarProperty Name="picFileName" ColumnName="picFileName" />
+          <ScalarProperty Name="pictureName" ColumnName="pictureName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

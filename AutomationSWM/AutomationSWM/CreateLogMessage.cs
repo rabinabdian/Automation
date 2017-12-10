@@ -9,6 +9,8 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.Extensions;
 using System.Drawing.Imaging;
 using System.Drawing;
+using System.Runtime.Remoting.Contexts;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AutomationSWM
 {
@@ -43,6 +45,13 @@ namespace AutomationSWM
 
         private void AddErrorToDB(Exception ex, string msg, string component_id, string host, string DT /*, Image imageName*/)
         {
+
+
+            FileStream fs = new FileStream(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\"+DT+".png",FileMode.Append);
+
+
+
+
             TEST_STATUS_TB tb = new TEST_STATUS_TB
             {
                 Test_ID = DT,
@@ -52,7 +61,7 @@ namespace AutomationSWM
                 COMPONENT_ID = component_id,
                 Creation_Time = DateTime.Now,
                 HOST = host,
-               /* IMAGE = imageToByteArray(imageName)*/
+                IMAGE = Convert.ToInt32(fs.Length);
 
             };
             db.TEST_STATUS_TB.Add(tb);

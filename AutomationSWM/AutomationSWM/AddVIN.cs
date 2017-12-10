@@ -35,7 +35,7 @@ namespace AutomationSWM
             driver.Manage().Window.Maximize();
 
             Thread.Sleep(5000);
-            driver.FindElement(By.Name("usernamee")).SendKeys(username);
+            driver.FindElement(By.Name("username")).SendKeys(username);
             //Thread.Sleep(5000);
             driver.FindElement(By.Id("inputPassword")).SendKeys(password);
             driver.FindElement(By.XPath("/html/body/app-root/app-auth/app-auth-sign-in/div/div/form/div[2]/button")).Click();
@@ -63,7 +63,7 @@ namespace AutomationSWM
 
 
                     // choose OS
-                    driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
+                    driver.FindElement(By.Name("viin")).SendKeys(v.VIN);
                     driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
                     driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
 
