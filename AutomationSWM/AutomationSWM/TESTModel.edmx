@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="AutomationDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="AutomationDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Pictures">
           <Key>
             <PropertyRef Name="pictureName" />
@@ -30,10 +30,19 @@
           <EntitySet Name="Pictures" EntityType="Self.Pictures" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TEST_STATUS_TB" EntityType="Self.TEST_STATUS_TB" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AutomationDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Picture">
+          <Key>
+            <PropertyRef Name="pictureName" />
+          </Key>
+          <Property Name="pictureName" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="picFileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PictureData" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <EntityType Name="TEST_STATUS_TB">
           <Key>
             <PropertyRef Name="Test_ID" />
@@ -48,27 +57,27 @@
           <Property Name="IMAGE" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityContainer Name="AutomationDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pictures" EntityType="Self.Picture" />
           <EntitySet Name="TEST_STATUS_TB" EntityType="Self.TEST_STATUS_TB" />
-          <EntitySet Name="Pictures" EntityType="AutomationDBModel.Picture" />
         </EntityContainer>
-        <EntityType Name="Picture">
-          <Key>
-            <PropertyRef Name="pictureName" />
-          </Key>
-          <Property Name="pictureName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="picFileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="PictureData" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="AutomationDBModelStoreContainer" CdmEntityContainer="AutomationDBEntities">
+          <EntitySetMapping Name="Pictures">
+            <EntityTypeMapping TypeName="AutomationDBModel.Picture">
+              <MappingFragment StoreEntitySet="Pictures">
+                <ScalarProperty Name="pictureName" ColumnName="pictureName" />
+                <ScalarProperty Name="picFileName" ColumnName="picFileName" />
+                <ScalarProperty Name="PictureData" ColumnName="PictureData" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TEST_STATUS_TB">
             <EntityTypeMapping TypeName="AutomationDBModel.TEST_STATUS_TB">
               <MappingFragment StoreEntitySet="TEST_STATUS_TB">
-                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
                 <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
                 <ScalarProperty Name="ACTION" ColumnName="ACTION" />
                 <ScalarProperty Name="STATUS" ColumnName="STATUS" />
@@ -76,15 +85,7 @@
                 <ScalarProperty Name="COMPONENT_ID" ColumnName="COMPONENT_ID" />
                 <ScalarProperty Name="Creation_Time" ColumnName="Creation_Time" />
                 <ScalarProperty Name="HOST" ColumnName="HOST" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Pictures">
-            <EntityTypeMapping TypeName="AutomationDBModel.Picture">
-              <MappingFragment StoreEntitySet="Pictures">
-                <ScalarProperty Name="PictureData" ColumnName="PictureData" />
-                <ScalarProperty Name="picFileName" ColumnName="picFileName" />
-                <ScalarProperty Name="pictureName" ColumnName="pictureName" />
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

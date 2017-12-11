@@ -23,6 +23,12 @@ namespace AutomationSWM
 
       
         AutomationDBEntities db = new AutomationDBEntities();
+        //public byte[] imageToByteArray(Image imageIn)
+        //{
+        //    MemoryStream ms = new MemoryStream();
+        //    imageIn.Add(ms, ImageFormat.Png);
+        //    return ms.ToArray();
+        //}
 
 
         public void ExceptionMessage(Exception ex, string msg ,string component_id , string host,string DT /*,Image imageName*/)
@@ -45,12 +51,14 @@ namespace AutomationSWM
 
         private void AddErrorToDB(Exception ex, string msg, string component_id, string host, string DT /*, Image imageName*/)
         {
-
-
-            FileStream fs = new FileStream(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\"+DT+".png",FileMode.Append);
-
-
-
+            string filePath = @"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png";
+             FileInfo fInfo = new FileInfo(filePath);
+            FileStream fs = new FileStream(filePath, FileMode.Open);
+            BinaryReader rdr = new BinaryReader(fs);
+            long numBytes = fInfo.Length; 
+            byte[] imageByte = null;
+            imageByte = rdr.ReadBytes((int)numBytes);
+            
 
             TEST_STATUS_TB tb = new TEST_STATUS_TB
             {
@@ -61,30 +69,33 @@ namespace AutomationSWM
                 COMPONENT_ID = component_id,
                 Creation_Time = DateTime.Now,
                 HOST = host,
-                IMAGE = Convert.ToInt32(fs.Length);
+                IMAGE = imageByte
+                //  IMAGE = Convert.ToInt32(fs.Length);
 
             };
-            db.TEST_STATUS_TB.Add(tb);
+            db.TEST_STATUS_TB.Add( tb);
             db.SaveChanges();
-            db.Dispose();
+          db.Dispose();
 
-           
+
 
         }
 
-        public byte[] imageToByteArray(Image imageIn)
-        {
-            MemoryStream ms = new MemoryStream();
-            imageIn.Save(ms, ImageFormat.Png);
-            return ms.ToArray();
-        }
-        
-        public Image byteArrayToImage(byte byteArrayIn)
-        {
-            MemoryStream ms = new MemoryStream(byteArrayIn);
-            Image returnImage = Image.FromStream(ms);
-            return returnImage;
-        }
+       
+
+        //public byte[] imageToByteArray(Image imageIn)
+        //{
+        //    MemoryStream ms = new MemoryStream();
+        //    imageIn.Save(ms, ImageFormat.Png);
+        //    return ms.ToArray();
+        //}
+
+        //public Image byteArrayToImage(byte byteArrayIn)
+        //{
+        //    MemoryStream ms = new MemoryStream(byteArrayIn);
+        //    Image returnImage = Image.FromStream(ms);
+        //    return returnImage;
+        //}
 
         public void VINSuccedMessage(Vehicle v , string host,string DT)
         {

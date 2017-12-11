@@ -6,8 +6,29 @@
 }
 
 <h2>Automation Test Results</h2>
+<style>
+    #my_image:hover{opacity:0.7;}
+    #appear_image_div{width:100%;height:100%;position:absolute;z-index:10;opacity:0.7;background:#002447;}
+    #appear_image {
+        display:block;
+       margin:auto;
+        position: relative;
+        z-index: 11;
+        top:20px;
+    }
+    #close_image {
 
-<script>
+        position: fixed;
+        z-index: 12;
+        top: 20px;
+        right:20px;
+        cursor:pointer;
+    }
+        #close_image:hover {
+            opacity: 0.7;
+        }
+</style>
+<script type="text/javascript">
 
     $(function () {
         $("tr").each(function () {
@@ -19,6 +40,26 @@
             }
         });
     });
+
+    jQuery(function ($) {
+        $('#img').click(function () {
+            var img = $(this).attr("src");
+            var appear_image = "<div id='appear_image_div' onClick='closeImage()'></div>";
+            appear_image = appear_image.concat("<img id='appear_image' src='"+ img + "'/>");
+            appear_image = appear_image.concat("<img id='close_image' onClick='closeImage()' src='close.png'/>");
+            $('body').append(appear_image);
+        });
+
+
+    });
+    function closeImage() {
+        $('#appear_image_div').remove();
+        $('#appear_image').remove();
+        $('#close_image_div').remove();
+
+    }
+
+
 
 </script>
 
@@ -51,14 +92,16 @@
             <th>
                 @Html.DisplayNameFor(model => model.ERROR_DETAILS)
             </th>
-
+            <th>
+                @Html.DisplayNameFor(model => model.IMAGE)
+            </th>
             @*<th></th>*@
         </tr>
 
                 @foreach (var item in Model)
                 {
 
-                 
+
                  <tr id="greetings" class=@item.STATUS>
 
                             <td>
@@ -83,7 +126,17 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.ERROR_DETAILS)
                             </td>
+                     <td>
+                         @{ 
+                             var base64 = Convert.ToBase64String(item.IMAGE);
+                             var imgsrc = string.Format("data:image/png;base64,{0}", base64);
 
+                         }
+
+                       <img id="my_image"  src='@imgsrc' style ="max-width:100px;max-height:100px"/>
+                         
+                         @*@Html.DisplayFor(modelItem => item.IMAGE)*@
+                     </td>
                             @*<td>
                                 @Html.ActionLink("Edit", "Edit", new { id=item.Test_ID }) |
                                 @Html.ActionLink("Details", "Details", new { id=item.Test_ID }) |

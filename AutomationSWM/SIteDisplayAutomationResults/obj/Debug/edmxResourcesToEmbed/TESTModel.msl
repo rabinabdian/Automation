@@ -4,6 +4,7 @@
     <EntitySetMapping Name="TEST_STATUS_TB">
       <EntityTypeMapping TypeName="AutomationDBModel.TEST_STATUS_TB">
         <MappingFragment StoreEntitySet="TEST_STATUS_TB">
+          <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
           <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
           <ScalarProperty Name="ACTION" ColumnName="ACTION" />
           <ScalarProperty Name="STATUS" ColumnName="STATUS" />
@@ -11,6 +12,15 @@
           <ScalarProperty Name="COMPONENT_ID" ColumnName="COMPONENT_ID" />
           <ScalarProperty Name="Creation_Time" ColumnName="Creation_Time" />
           <ScalarProperty Name="HOST" ColumnName="HOST" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pictures">
+      <EntityTypeMapping TypeName="AutomationDBModel.Picture">
+        <MappingFragment StoreEntitySet="Pictures">
+          <ScalarProperty Name="PictureData" ColumnName="PictureData" />
+          <ScalarProperty Name="picFileName" ColumnName="picFileName" />
+          <ScalarProperty Name="pictureName" ColumnName="pictureName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

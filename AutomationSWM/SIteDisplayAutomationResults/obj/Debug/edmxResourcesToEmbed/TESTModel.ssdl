@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="AutomationDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Pictures">
+    <Key>
+      <PropertyRef Name="pictureName" />
+    </Key>
+    <Property Name="pictureName" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="picFileName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PictureData" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="TEST_STATUS_TB">
     <Key>
       <PropertyRef Name="Test_ID" />
@@ -11,8 +19,10 @@
     <Property Name="COMPONENT_ID" Type="nvarchar" MaxLength="50" />
     <Property Name="Creation_Time" Type="datetime" />
     <Property Name="HOST" Type="varchar(max)" />
+    <Property Name="IMAGE" Type="image" />
   </EntityType>
   <EntityContainer Name="AutomationDBModelStoreContainer">
+    <EntitySet Name="Pictures" EntityType="Self.Pictures" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TEST_STATUS_TB" EntityType="Self.TEST_STATUS_TB" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

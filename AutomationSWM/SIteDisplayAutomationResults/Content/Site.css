@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+img {
+   
+   
+}
 body {
     background-color: #fff;
     border-top: solid 10px #000;
@@ -66,7 +70,7 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 20em;
 }
 
 h2 {
@@ -610,7 +614,7 @@ tr.pager td {
 
     /* logo */
     header .site-title {
-        margin: 10px;
+        margin: 1px;
         text-align: center;
     }
 
@@ -647,7 +651,7 @@ tr.pager td {
 
     /* menu */
     nav {
-        margin-bottom: 5px;
+        margin-bottom: 1px;
     }
 
     ul#menu {

@@ -62,7 +62,6 @@ C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\De
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\ThoughtWorks.Selenium.Core.xml
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\WebDriver.xml
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\Debug\WebDriver.Support.xml
-C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.csprojResolveAssemblyReference.cache
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.csproj.CoreCompileInputs.cache
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.dll
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.pdb

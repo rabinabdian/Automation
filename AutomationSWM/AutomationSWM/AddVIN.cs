@@ -20,11 +20,9 @@ namespace AutomationSWM
         IWebDriver driver;
         string username = "swmuser";
         string password = "swmPassword1";
-        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters5);
+        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters3);
         string DT = DateTime.Now.ToFileTime().ToString();
-        CreateLogMessage log = new CreateLogMessage();
-       
-
+        CreateLogMessage log = new CreateLogMessage();      
 
         [TestInitialize]
         public void Init()
@@ -34,13 +32,13 @@ namespace AutomationSWM
             driver.Navigate().GoToUrl(urlAdrr);
             driver.Manage().Window.Maximize();
 
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
             driver.FindElement(By.Name("username")).SendKeys(username);
             //Thread.Sleep(5000);
             driver.FindElement(By.Id("inputPassword")).SendKeys(password);
             driver.FindElement(By.XPath("/html/body/app-root/app-auth/app-auth-sign-in/div/div/form/div[2]/button")).Click();
 
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
            // driver.FindElement(By.XPath("//i[contains(@class,'logo')]")).Click();
 
 
@@ -50,13 +48,14 @@ namespace AutomationSWM
         public void Add_New_Vehicle()
         {
            
+                Thread.Sleep(1000);
+
                 Vehicle v = new Vehicle();
 
 
-                
-
                 try
                 {
+
 
                     driver.FindElement(By.XPath("//*[@id='dashboardItems']/div[2]/div/div[2]/div/a")).Click();
 
@@ -75,11 +74,15 @@ namespace AutomationSWM
                     // choose Model Code 
                     driver.FindElement(By.XPath("//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]")).Click();
 
+                    // choose ABCD-EFG-P1!
+                    //  driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
 
-                driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
+                    // choose ABCD-EFG-P3
+                    driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(8) > div")).Click();
 
-                //   driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
-                Thread.Sleep(5000);
+
+                    //   driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
+                    Thread.Sleep(2000);
 
 
 
@@ -94,31 +97,32 @@ namespace AutomationSWM
                         goto WaitForSaveButtonUntilVisible;
                     }
 
-                    log.VINSuccedMessage(v,urlAdrr,DT);
+                    log.VINSuccedMessage(v, urlAdrr,DT );
                     //rep.Pass("Add New SoftWare Passed", "New SoftWare Creation Passed");
+                    //driver.FindElement(By.XPath("//i[contains(@class,'logo')]")).Click();
+                    //Thread.Sleep(2000);
+                    //driver.FindElement(By.XPath("//*[@id='wrapper']/app-topbar/nav/a/div")).Click();
+                    //Thread.Sleep(2000);
 
-                    Thread.Sleep(1000);
 
-                   // driver.FindElement(By.XPath("//i[contains(@class,'icon-harman_logo')]")).Click();
+
+
 
                 }
+
                 catch (Exception ex)
                 {
 
-              
-
-                driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
-
-       
 
 
-
-                log.ExceptionMessage(ex, "Add Vehicle Failure",v.VIN,urlAdrr,DT);
+                    driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
+                
+                    log.ExceptionMessage(ex, "Add Vehicle Failure", v.VIN, urlAdrr, DT);
                     //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");
 
                 }
-            
 
+            
         }
 
         [TestCleanup]
