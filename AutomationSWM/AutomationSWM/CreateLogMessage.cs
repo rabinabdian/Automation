@@ -51,7 +51,10 @@ namespace AutomationSWM
 
         private void AddErrorToDB(Exception ex, string msg, string component_id, string host, string DT /*, Image imageName*/)
         {
+
+
             string filePath = @"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png";
+
              FileInfo fInfo = new FileInfo(filePath);
             FileStream fs = new FileStream(filePath, FileMode.Open);
             BinaryReader rdr = new BinaryReader(fs);
@@ -83,19 +86,7 @@ namespace AutomationSWM
 
        
 
-        //public byte[] imageToByteArray(Image imageIn)
-        //{
-        //    MemoryStream ms = new MemoryStream();
-        //    imageIn.Save(ms, ImageFormat.Png);
-        //    return ms.ToArray();
-        //}
-
-        //public Image byteArrayToImage(byte byteArrayIn)
-        //{
-        //    MemoryStream ms = new MemoryStream(byteArrayIn);
-        //    Image returnImage = Image.FromStream(ms);
-        //    return returnImage;
-        //}
+     
 
         public void VINSuccedMessage(Vehicle v , string host,string DT)
         {

@@ -38,7 +38,7 @@ namespace AutomationSWM
             driver.FindElement(By.Id("inputPassword")).SendKeys(password);
             driver.FindElement(By.XPath("/html/body/app-root/app-auth/app-auth-sign-in/div/div/form/div[2]/button")).Click();
 
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
            // driver.FindElement(By.XPath("//i[contains(@class,'logo')]")).Click();
 
 

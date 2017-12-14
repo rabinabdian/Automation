@@ -65,3 +65,4 @@ C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\bin\De
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.csproj.CoreCompileInputs.cache
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.dll
 C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.pdb
+C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\obj\Debug\AutomationSWM.csprojResolveAssemblyReference.cache

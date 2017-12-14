@@ -128,8 +128,15 @@
                             </td>
                      <td>
                          @{ 
-                             var base64 = Convert.ToBase64String(item.IMAGE);
-                             var imgsrc = string.Format("data:image/png;base64,{0}", base64);
+                             string imgsrc = null;
+                             if (item.IMAGE != null)
+                             {
+                                 var base64 = Convert.ToBase64String(item.IMAGE);
+
+                                 imgsrc = string.Format("data:image/png;base64,{0}", base64);
+                             }
+
+
 
                          }
 
