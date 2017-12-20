@@ -20,7 +20,7 @@ namespace AutomationSWM
         IWebDriver driver;
         string username = "swmuser";
         string password = "swmPassword1";
-        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters3);
+        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters5);
         string DT = DateTime.Now.ToFileTime().ToString();
         CreateLogMessage log = new CreateLogMessage();      
 
@@ -62,7 +62,7 @@ namespace AutomationSWM
 
 
                     // choose OS
-                    driver.FindElement(By.Name("viin")).SendKeys(v.VIN);
+                    driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
                     driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
                     driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
 

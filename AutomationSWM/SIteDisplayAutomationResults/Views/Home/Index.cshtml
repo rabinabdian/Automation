@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Automation Test Results</h2>
+<h1>    -----------------------------------------------------------------------------------------------    </h1>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
@@ -85,10 +85,12 @@
 
 </script>
 
+<div>
+    <p>
+        <h1> Automation Test Results</h1>
+    </p>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <div>
     <table class="table" border="1">
         <tr>
@@ -166,11 +168,7 @@
                          
                          @*@Html.DisplayFor(modelItem => item.IMAGE)*@
                      </td>
-                            @*<td>
-                                @Html.ActionLink("Edit", "Edit", new { id=item.Test_ID }) |
-                                @Html.ActionLink("Details", "Details", new { id=item.Test_ID }) |
-                                @Html.ActionLink("Delete", "Delete", new { id=item.Test_ID })
-                            </td>*@
+                          
                         </tr>
             }
 

@@ -7,10 +7,11 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Create New", "Create")*@
 </p>
-<table class="table">
+<table  class="table" >
     <tr>
+
         <th>
             @Html.DisplayNameFor(model => model.ACTION)
         </th>
@@ -58,11 +59,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.IMAGE)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Test_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Test_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Test_ID })
-        </td>
+       
     </tr>
 }
 

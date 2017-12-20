@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="AutomationDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="AutomationDBModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="TEST_STATUS_TB">
           <Key>
             <PropertyRef Name="Test_ID" />
@@ -18,13 +18,14 @@
           <Property Name="HOST" Type="varchar(max)" />
           <Property Name="IMAGE" Type="image" />
         </EntityType>
-        <EntityContainer Name="AutomationDBModelStoreContainer">
+        <EntityContainer Name="AutomationDBModel2StoreContainer">
           <EntitySet Name="TEST_STATUS_TB" EntityType="Self.TEST_STATUS_TB" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="AutomationDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="AutomationDBModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="TEST_STATUS_TB">
           <Key>
             <PropertyRef Name="Test_ID" />
@@ -38,7 +39,7 @@
           <Property Name="HOST" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="IMAGE" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <EntityContainer Name="AutomationDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AutomationDBEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TEST_STATUS_TB" EntityType="Self.TEST_STATUS_TB" />
         </EntityContainer>
       </Schema>
@@ -46,9 +47,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="AutomationDBModelStoreContainer" CdmEntityContainer="AutomationDBEntities">
+        <EntityContainerMapping StorageEntityContainer="AutomationDBModel2StoreContainer" CdmEntityContainer="AutomationDBEntities2">
           <EntitySetMapping Name="TEST_STATUS_TB">
-            <EntityTypeMapping TypeName="AutomationDBModel.TEST_STATUS_TB">
+            <EntityTypeMapping TypeName="AutomationDBModel2.TEST_STATUS_TB">
               <MappingFragment StoreEntitySet="TEST_STATUS_TB">
                 <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
                 <ScalarProperty Name="ACTION" ColumnName="ACTION" />
@@ -77,7 +78,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
