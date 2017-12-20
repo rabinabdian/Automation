@@ -51,17 +51,7 @@ namespace AutomationSWM
 
         private void AddErrorToDB(Exception ex, string msg, string component_id, string host, string DT /*, Image imageName*/)
         {
-
-
-            string filePath = @"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png";
-
-             FileInfo fInfo = new FileInfo(filePath);
-            FileStream fs = new FileStream(filePath, FileMode.Open);
-            BinaryReader rdr = new BinaryReader(fs);
-            long numBytes = fInfo.Length; 
-            byte[] imageByte = null;
-            imageByte = rdr.ReadBytes((int)numBytes);
-            
+            byte[] imageByte = createScreenShot(DT);
 
             TEST_STATUS_TB tb = new TEST_STATUS_TB
             {
@@ -76,17 +66,31 @@ namespace AutomationSWM
                 //  IMAGE = Convert.ToInt32(fs.Length);
 
             };
-            db.TEST_STATUS_TB.Add( tb);
+            db.TEST_STATUS_TB.Add(tb);
             db.SaveChanges();
-          db.Dispose();
+            db.Dispose();
 
 
 
         }
 
-       
+        private static byte[] createScreenShot(string DT)
+        {
+            string filePath = @"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png";
 
-     
+            FileInfo fInfo = new FileInfo(filePath);
+            FileStream fs = new FileStream(filePath, FileMode.Open);
+            BinaryReader rdr = new BinaryReader(fs);
+            long numBytes = fInfo.Length;
+            byte[] imageByte = null;
+            imageByte = rdr.ReadBytes((int)numBytes);
+            return imageByte;
+        }
+
+        internal void VINSuccedMessage(Campaign c, string urlAdrr, string dT)
+        {
+            throw new NotImplementedException();
+        }
 
         public void VINSuccedMessage(Vehicle v , string host,string DT)
         {

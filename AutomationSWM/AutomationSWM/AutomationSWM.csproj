@@ -91,19 +91,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Campaign.cs" />
-    <Compile Include="CreateLogMessage.cs" />
-    <Compile Include="Initializer.cs" />
+    <Compile Include="Classes\Campaign.cs" />
+    <Compile Include="Classes\CreateLogMessage.cs" />
+    <Compile Include="Classes\Initializer.cs" />
     <Compile Include="Picture.cs">
       <DependentUpon>TESTModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="SiteUrl.cs" />
-    <Compile Include="Software.cs" />
-    <Compile Include="AddSW.cs" />
+    <Compile Include="Classes\SiteUrl.cs" />
+    <Compile Include="Classes\Software.cs" />
+    <Compile Include="Tests\AddSW.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AddUser.cs" />
-    <Compile Include="AddVIN.cs" />
-    <Compile Include="AddCamp.cs" />
+    <Compile Include="Tests\AddUser.cs" />
+    <Compile Include="Tests\AddVIN.cs" />
+    <Compile Include="Tests\AddCamp.cs" />
     <Compile Include="TESTModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,11 +119,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TESTModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Tests\CreateCampaign.cs" />
     <Compile Include="TEST_STATUS_TB.cs">
       <DependentUpon>TESTModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="USER.cs" />
-    <Compile Include="Vehicle.cs" />
+    <Compile Include="Classes\USER.cs" />
+    <Compile Include="Classes\Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

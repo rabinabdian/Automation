@@ -814,3 +814,313 @@ StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(R
    at AutomationSWM.AddVIN.Add_New_Vehicle() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\AddVIN.cs:line 65
 
 -----------------------------------------------------------------------------
+TEST_ID: 131582337333526099 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 10:55:52----------------------------------------
+Message :Vehicle VIN-131582337490223543 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582354486926768 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 11:24:29----------------------------------------
+Message :Vehicle VIN-131582354654535171 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582355766720728 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 11:26:36----------------------------------------
+Message :Vehicle VIN-131582355928373479 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582356294690803 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 11:27:29----------------------------------------
+Message :Vehicle VIN-131582356458756653 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582357700671811 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 11:29:47----------------------------------------
+Message :no such element: Unable to locate element: {"method":"css selector","selector":"#filter-modelCode > app-input-select > div > div > ul > li.list-option-item.ng-star-inserted.selected > div > span:nth-child(1)"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByCssSelector(String cssSelector)
+   at OpenQA.Selenium.By.<>c__DisplayClass1e.<CssSelector>b__1c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.AddVIN.Add_New_Vehicle1() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\AddVIN.cs:line 157
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582358756856332 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 11:31:33----------------------------------------
+Message :no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='filter - modelCode']/app-input-select/div/div/ul/li[5]/div/span[1]"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClasse.<XPath>b__c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.AddVIN.Add_New_Vehicle1() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\AddVIN.cs:line 157
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582359393663520 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 11:32:39----------------------------------------
+Message :Vehicle VIN-131582359557675429 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582361765212273 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 11:36:35----------------------------------------
+Message :Vehicle VIN-131582361925027440 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582362937489354 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 11:38:33----------------------------------------
+Message :Vehicle VIN-131582363098760532 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582363139800966 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 11:38:52----------------------------------------
+Message :Vehicle VIN-131582363289828713 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582363349128820 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 11:39:13----------------------------------------
+Message :Vehicle VIN-131582363499156891 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582363557767901 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 11:39:35----------------------------------------
+Message :Vehicle VIN-131582363719665310 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582370673151693 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 11:51:26----------------------------------------
+Message :Vehicle VIN-131582370831551554 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582371559007294 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 11:52:54----------------------------------------
+Message :Vehicle VIN-131582371715033889 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582374911592643 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 11:58:27----------------------------------------
+Message :no such element: Unable to locate element: {"method":"name","selector":"vin"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByName(String name)
+   at OpenQA.Selenium.By.<>c__DisplayClassa.<Name>b__8(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 62
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582376361090609 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 12:00:52----------------------------------------
+Message :no such element: Unable to locate element: {"method":"name","selector":"vin"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByName(String name)
+   at OpenQA.Selenium.By.<>c__DisplayClassa.<Name>b__8(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 62
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582378686942393 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 12:04:45----------------------------------------
+Message :no such element: Unable to locate element: {"method":"name","selector":"vin"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByName(String name)
+   at OpenQA.Selenium.By.<>c__DisplayClassa.<Name>b__8(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 62
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582381238276434 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 12:09:00----------------------------------------
+Message :no such element: Unable to locate element: {"method":"name","selector":"vin"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByName(String name)
+   at OpenQA.Selenium.By.<>c__DisplayClassa.<Name>b__8(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 62
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582382351053397 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 12:10:52----------------------------------------
+Message :no such element: Unable to locate element: {"method":"name","selector":"vin"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByName(String name)
+   at OpenQA.Selenium.By.<>c__DisplayClassa.<Name>b__8(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 62
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582383538435989 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 12:12:50----------------------------------------
+Message :no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='inputName']"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClasse.<XPath>b__c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 62
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582384167156675 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 12:13:54----------------------------------------
+Message :no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='inputName']"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClasse.<XPath>b__c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 62
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582384604331552 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 12:14:37----------------------------------------
+Message :no such element: Unable to locate element: {"method":"css selector","selector":"#inputName"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByCssSelector(String cssSelector)
+   at OpenQA.Selenium.By.<>c__DisplayClass1e.<CssSelector>b__1c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 62
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582406960443288 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 12:51:53----------------------------------------
+Message :no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClasse.<XPath>b__c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 66
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582407883405948 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 12:53:26----------------------------------------
+Message :no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClasse.<XPath>b__c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 66
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582409526822425 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 12:56:09----------------------------------------
+Message :no such element: Unable to locate element: {"method":"css selector","selector":"#inputName"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByCssSelector(String cssSelector)
+   at OpenQA.Selenium.By.<>c__DisplayClass1e.<CssSelector>b__1c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 62
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582410063776016 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 12:57:08----------------------------------------
+Message :no such element: Unable to locate element: {"method":"css selector","selector":"#filter-modelCode > app-input-select > div > div > ul > li:nth-child(8) > div"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByCssSelector(String cssSelector)
+   at OpenQA.Selenium.By.<>c__DisplayClass1e.<CssSelector>b__1c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 75
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582412098960464 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 13:01:20----------------------------------------
+Message :{"errorMessage":"Unable to find element with css selector '#filter-modelCode > app-input-select > div > div > ul > li:nth-child(8) > div'","request":{"headers":{"Accept":"application/json, image/png","Connection":"Close","Content-Length":"137","Content-Type":"application/json;charset=utf-8","Host":"localhost:23376"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"css selector\",\"value\":\"#filter-modelCode > app-input-select > div > div > ul > li:nth-child(8) > div\",\"locator\":\"css selector\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/f3799cd0-e574-11e7-bdbd-31cdfe1c957c/element"}}<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByCssSelector(String cssSelector)
+   at OpenQA.Selenium.By.<>c__DisplayClass1e.<CssSelector>b__1c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 77
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582414432450373 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 13:05:10----------------------------------------
+Message :Vehicle VIN-131582415061626964 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582415119208764 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 13:06:17----------------------------------------
+Message :Vehicle VIN-131582415731245976 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582415772867493 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 13:07:22----------------------------------------
+Message :Vehicle VIN-131582416387676441 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582416426119267 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/20/2017 13:08:27----------------------------------------
+Message :Vehicle VIN-131582417041499490 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131582417158610909 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 13:09:49----------------------------------------
+Message :{"errorMessage":"Unable to find element with xpath '//button[contains(@class,'new-form-btn save-btn')]'","request":{"headers":{"Accept":"application/json, image/png","Connection":"Close","Content-Length":"96","Content-Type":"application/json;charset=utf-8","Host":"localhost:24532"},"httpVersion":"1.1","method":"POST","post":"{\"using\":\"xpath\",\"value\":\"//button[contains(@class,'new-form-btn save-btn')]\",\"locator\":\"xpath\"}","url":"/element","urlParsed":{"anchor":"","query":"","file":"element","directory":"/","path":"/element","relative":"/element","port":"","host":"","password":"","user":"","userInfo":"","authority":"","protocol":"","source":"/element","queryKey":{},"chunks":["element"]},"urlOriginal":"/session/20fcf5c0-e576-11e7-9898-f5d5e59e8113/element"}}<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClasse.<XPath>b__c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 87
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582419495686357 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 13:12:53----------------------------------------
+Message :no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@class,'new-form-btn save-btn')]"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClasse.<XPath>b__c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 87
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582420523253352 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 13:14:36----------------------------------------
+Message :no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(@class,'new-form-btn save-btn')]"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClasse.<XPath>b__c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 87
+
+-----------------------------------------------------------------------------
+TEST_ID: 131582421530238511 ---- http://d4-sprinters5.redbend.com:8080/sma2/#/auth/sign-in -------Add Vehicle Failure ------------- Date :12/20/2017 13:16:16----------------------------------------
+Message :no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='wizard_toolbar_execute']"}
+  (Session info: chrome=63.0.3239.108)
+  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.16299 x86_64)<br/>
+StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClasse.<XPath>b__c(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at AutomationSWM.Tests.CreateCampaign.NewCampaign() in C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Tests\CreateCampaign.cs:line 87
+
+-----------------------------------------------------------------------------
