@@ -21,27 +21,27 @@ namespace AutomationSWM
         IWebDriver driver;
         string username = "swmuser";
         string password = "swmPassword1";
-        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters5);
+        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters3);
         string DT = DateTime.Now.ToFileTime().ToString();
         CreateLogMessage log = new CreateLogMessage();      
 
         [TestInitialize]
         public void Init()
         {
-            //rep.StartReport();
-            // driver = new ChromeDriver();
-            driver = new PhantomJSDriver();
+          
+             driver = new ChromeDriver();
+           // driver = new PhantomJSDriver();
             driver.Navigate().GoToUrl(urlAdrr);
             driver.Manage().Window.Maximize();
 
             Thread.Sleep(1000);
             driver.FindElement(By.Name("username")).SendKeys(username);
-            //Thread.Sleep(5000);
+          
             driver.FindElement(By.Id("inputPassword")).SendKeys(password);
             driver.FindElement(By.XPath("/html/body/app-root/app-auth/app-auth-sign-in/div/div/form/div[2]/button")).Click();
 
             Thread.Sleep(3000);
-           // driver.FindElement(By.XPath("//i[contains(@class,'logo')]")).Click();
+        
 
 
         }
@@ -80,7 +80,7 @@ namespace AutomationSWM
                     //  driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
 
                     // choose ABCD-EFG-P3
-                    driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(8) > div")).Click();
+                    driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(7) > div > span:nth-child(1)")).Click();
 
 
                     //   driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
@@ -183,10 +183,11 @@ namespace AutomationSWM
 
             }
 
-            catch (Exception ex)
+            catch (Exception ex )
             {
 
 
+               
 
                 driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
 

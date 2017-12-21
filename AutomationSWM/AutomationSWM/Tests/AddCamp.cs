@@ -43,10 +43,7 @@ namespace AutomationSWM
             Campaign camp = new Campaign();
             string DT = DateTime.Now.ToFileTime().ToString();
 
-            camp.Name="CAMP"+ DT;
-            camp.UpdateFailureMessage = camp.Name + " Update Failure Message";
-            camp.UpdateSuccessMessage = camp.Name+" Update Success Message";
-            camp.Description = camp.Name +" Description";
+           
 
             try
             {
@@ -59,7 +56,7 @@ namespace AutomationSWM
 
 
 
-                log.AddCampSucceed(camp,urlAdrr);
+                log.CampSuccedMessage(camp,urlAdrr,DT);
 
 
 

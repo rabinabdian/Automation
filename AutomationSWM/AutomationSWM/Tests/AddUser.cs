@@ -3,6 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using System.Threading;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.Extensions;
+using System.Drawing.Imaging;
 
 namespace AutomationSWM
 {
@@ -22,20 +24,18 @@ namespace AutomationSWM
         [TestInitialize]
         public void Init()
         {
-            //rep.StartReport();
             driver = new ChromeDriver();
+            // driver = new PhantomJSDriver();
             driver.Navigate().GoToUrl(urlAdrr);
             driver.Manage().Window.Maximize();
 
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
             driver.FindElement(By.Name("username")).SendKeys(username);
-            driver.FindElement(By.Name("password")).SendKeys(password);
+
+            driver.FindElement(By.Id("inputPassword")).SendKeys(password);
             driver.FindElement(By.XPath("/html/body/app-root/app-auth/app-auth-sign-in/div/div/form/div[2]/button")).Click();
 
-            Thread.Sleep(5000);
-            driver.FindElement(By.XPath("//i[contains(@class,'icon-harman_logo')]")).Click();
-            //Initializer init = new Initializer();
-
+            Thread.Sleep(3000);
 
         }
 
@@ -44,8 +44,8 @@ namespace AutomationSWM
         [TestMethod]
         public void Add_New_USER()
         {
-            for (int i = 0; i < 1; i++)
-            {
+            
+            
                 USER u = new USER();
 
 
@@ -107,12 +107,13 @@ namespace AutomationSWM
                 }
                 catch (Exception ex)
                 {
+                driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
 
-                    log.ExceptionMessage(ex, "Add User Failure",u.UserName,urlAdrr,DT);
+                log.ExceptionMessage(ex, "Add User Failure",u.UserName,urlAdrr,DT);
                     //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");
 
                 }
-            }
+            
 
         }
 

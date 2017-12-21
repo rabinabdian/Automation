@@ -31,16 +31,16 @@ namespace AutomationSWM
         //}
 
 
-        public void ExceptionMessage(Exception ex, string msg ,string component_id , string host,string DT /*,Image imageName*/)
+        public void ExceptionMessage(Exception ex, string msg ,string component_id , string host,string DT )
         {
 
 
-           
+            string lineNumber = ex.StackTrace.Substring(ex.StackTrace.Length - 7, 7);
 
             File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt",
                                 "TEST_ID: " + DT + " ---- " + host + " -------" + msg + " -------------" + " Date :" + DateTime.Now.ToString()
                                 + "----------------------------------------" +
-                              Environment.NewLine + "Message :" + ex.Message + "<br/>" + Environment.NewLine + "StackTrace :" + ex.StackTrace +
+                              Environment.NewLine + "Message :" + lineNumber + ex.Message + "<br/>" + Environment.NewLine + "StackTrace :" + ex.StackTrace +
                       "" + Environment.NewLine);
             string New = Environment.NewLine + "-----------------------------------------------------------------------------" + Environment.NewLine;
             File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt", New);
@@ -49,7 +49,7 @@ namespace AutomationSWM
 
         }
 
-        private void AddErrorToDB(Exception ex, string msg, string component_id, string host, string DT /*, Image imageName*/)
+        private void AddErrorToDB(Exception ex, string msg, string component_id, string host, string DT)
         {
             byte[] imageByte = createScreenShot(DT);
 
@@ -76,6 +76,7 @@ namespace AutomationSWM
 
         private static byte[] createScreenShot(string DT)
         {
+         //   driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
             string filePath = @"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png";
 
             FileInfo fInfo = new FileInfo(filePath);
@@ -92,13 +93,14 @@ namespace AutomationSWM
             throw new NotImplementedException();
         }
 
+        //internal void ExceptionMessage(Exception ex, string v, string userName, string urlAdrr, string dT, IWebDriver driver)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         public void VINSuccedMessage(Vehicle v , string host,string DT)
         {
 
-            
-           
-
-          
             File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt",
                               "TEST_ID: " + DT + " ---- " + host + " -------" + "Add New VIN Test " + " Date :" + DateTime.Now.ToString()
                               + "----------------------------------------" +
@@ -108,21 +110,18 @@ namespace AutomationSWM
             AddSuccessMsgToDB(v.VIN, host, DT, ACTION.Add_New_Vehicle.ToString());
         }
 
-        public void AddCampSucceed(Campaign camp,string host)
+        public void CampSuccedMessage(Campaign c, string host, string DT)
         {
-            string DT = DateTime.Now.ToFileTime().ToString();
-
-          
-
             File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt",
-                             "TEST_ID: " + DT + " ---- " + host + " -------" + "Add New Software Test " + " Date :" + DateTime.Now.ToString()
+                             "TEST_ID: " + DT + " ---- " + host + " -------" + "Add New Campaign Test " + " Date :" + DateTime.Now.ToString()
                              + "----------------------------------------" +
-                              Environment.NewLine + "Message :" + "Software " + camp.Name + " Created Successfully "
+                              Environment.NewLine + "Message :" + "Campaign " + c.Name + " Created Successfully "
                               + Environment.NewLine + "-----------------------------------------------------------------------------" + Environment.NewLine);
 
-            AddSuccessMsgToDB(camp.Name, host, DT, ACTION.Add_New_Campaign.ToString());
+            AddSuccessMsgToDB(c.Name, host, DT, ACTION.Add_New_Campaign.ToString());
         }
 
+       
         
 
         public void USERSuccedMessage(USER u,string host)

@@ -23,7 +23,7 @@ namespace AutomationSWM.Tests
         [TestInitialize]
         public void Init()
         {
-            //rep.StartReport();
+           
             driver = new ChromeDriver();
             //driver = new PhantomJSDriver();
             driver.Navigate().GoToUrl(urlAdrr);
@@ -75,7 +75,7 @@ namespace AutomationSWM.Tests
 
                 driver.FindElement(By.XPath("//*[@id='campaignCreate']/div/app-campaign-create-header/nav/div/div[1]/div[4]/div")).Click();
 
-                driver.FindElement(By.XPath("//*[@id='wizard_toolbar_execute']")).Click();
+               
 
                 //   driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
                 Thread.Sleep(2000);
@@ -93,10 +93,10 @@ namespace AutomationSWM.Tests
                     goto WaitForExecuteButtonUntilVisible;
                 }
 
-                log.VINSuccedMessage(c, urlAdrr, DT);
+                log.CampSuccedMessage(c, urlAdrr, DT);
 
 
-                driver.FindElement(By.XPath("//*[@id='wrapper']/app-topbar/nav/a/div")).Click();
+              //  driver.FindElement(By.XPath("//*[@id='wrapper']/app-topbar/nav/a/div")).Click();
 
 
             }
@@ -108,13 +108,21 @@ namespace AutomationSWM.Tests
 
                 driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
 
-                log.ExceptionMessage(ex, "Add Vehicle Failure", c.Name, urlAdrr, DT);
+                log.ExceptionMessage(ex, "Add Campaign Failure", c.Name, urlAdrr, DT);
                 //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");
 
             }
 
 
 
+        }
+
+
+        [TestCleanup]
+        public void CloseBrowser()
+        {
+            //rep.EndReport();
+            driver.Close();
         }
     }
 }
