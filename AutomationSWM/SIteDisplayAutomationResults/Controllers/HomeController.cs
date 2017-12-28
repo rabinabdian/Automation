@@ -7,6 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace SIteDisplayAutomationResults.Controllers
 {
+    
     public class HomeController : Controller
     {
 

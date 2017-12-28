@@ -9,11 +9,14 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using WebApi;
 
 namespace WebApi.Controllers
 {
+
+    [EnableCorsAttribute("http://localhost:12800", "*","*")]
     public class TEST_STATUS_TBController : ApiController
     {
          AutomationDBEntities2 db = new AutomationDBEntities2();

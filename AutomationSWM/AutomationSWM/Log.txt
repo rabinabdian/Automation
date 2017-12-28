@@ -1384,3 +1384,27 @@ StackTrace :   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(R
 TEST_ID: 131583484901497745 ---- http://d4-sprinters3.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/21/2017 18:48:31----------------------------------------
 Message :Vehicle VIN-131583485070637982 Created Successfully 
 -----------------------------------------------------------------------------
+TEST_ID: 131583486939389642 ---- http://d4-sprinters3.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/21/2017 18:51:56----------------------------------------
+Message :Vehicle VIN-131583487129828782 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131583487185326360 ---- http://d4-sprinters3.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/21/2017 18:52:19----------------------------------------
+Message :Vehicle VIN-131583487365122210 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131583487405211224 ---- http://d4-sprinters3.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/21/2017 18:52:40----------------------------------------
+Message :Vehicle VIN-131583487575257806 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131583487634265192 ---- http://d4-sprinters3.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/21/2017 18:53:03----------------------------------------
+Message :Vehicle VIN-131583487800059283 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131589140657050655 ---- http://d4-sprinters1.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/28/2017 07:54:49----------------------------------------
+Message :Vehicle VIN-131589140853434976 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131589140908941509 ---- http://d4-sprinters1.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/28/2017 07:55:16----------------------------------------
+Message :Vehicle VIN-131589141101804918 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131589141174183045 ---- http://d4-sprinters1.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/28/2017 07:55:41----------------------------------------
+Message :Vehicle VIN-131589141373310673 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131589141417712815 ---- http://d4-sprinters1.redbend.com:8080/sma2/#/auth/sign-in -------Add New VIN Test  Date :12/28/2017 07:56:03----------------------------------------
+Message :Vehicle VIN-131589141594193206 Created Successfully 
+-----------------------------------------------------------------------------

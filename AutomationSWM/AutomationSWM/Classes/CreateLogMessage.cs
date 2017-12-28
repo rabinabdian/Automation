@@ -40,7 +40,7 @@ namespace AutomationSWM
             File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt",
                                 "TEST_ID: " + DT + " ---- " + host + " -------" + msg + " -------------" + " Date :" + DateTime.Now.ToString()
                                 + "----------------------------------------" +
-                              Environment.NewLine + "Message :" + lineNumber + ex.Message + "<br/>" + Environment.NewLine + "StackTrace :" + ex.StackTrace +
+                              Environment.NewLine + "Message :" + lineNumber +" "+ ex.Message + "<br/>" + Environment.NewLine + "StackTrace :" + ex.StackTrace +
                       "" + Environment.NewLine);
             string New = Environment.NewLine + "-----------------------------------------------------------------------------" + Environment.NewLine;
             File.AppendAllText(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Log.txt", New);
