@@ -11,6 +11,7 @@ using System.Xml.Linq;
 using System.Security.Policy;
 using System.Linq;
 using OpenQA.Selenium.PhantomJS;
+using AutomationSWM.Classes;
 
 namespace AutomationSWM
 {
@@ -18,28 +19,34 @@ namespace AutomationSWM
     public class AddVIN
   
     {
-        IWebDriver driver;
-        string username = "swmuser";
-        string password = "swmPassword1";
-        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters5);
-        string DT = DateTime.Now.ToFileTime().ToString();
+        //IWebb.driver driver;
+        //string username = "swmuser";
+        //string password = "swmPassword1";
+        //string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters5);
+        //string b.DT = DateTime.Now.ToFileTime().ToString();
+
+        Base b = new Base();
+
+
+       
+
         CreateLogMessage log = new CreateLogMessage();      
 
         [TestInitialize]
         public void Init()
         {
-            ChromeOptions option = new ChromeOptions();
-            option.AddArgument("--headless");
-            driver = new ChromeDriver(option);
+            //ChromeOptions option = new ChromeOptions();
+            //option.AddArgument("--headless");
+            //b.b.driver = new ChromeDriver(option);
            // driver = new PhantomJSDriver();
-            driver.Navigate().GoToUrl(urlAdrr);
-            driver.Manage().Window.Maximize();
+            b.driver.Navigate().GoToUrl(b.urlAdrr);
+            b.driver.Manage().Window.Maximize();
 
             Thread.Sleep(1000);
-            driver.FindElement(By.Name("username")).SendKeys(username);
+            b.driver.FindElement(By.Name("username")).SendKeys(b.username);
           
-            driver.FindElement(By.Id("inputPassword")).SendKeys(password);
-            driver.FindElement(By.XPath("/html/body/app-root/app-auth/app-auth-sign-in/div/div/form/div[2]/button")).Click();
+            b.driver.FindElement(By.Id("inputPassword")).SendKeys(b.password);
+            b.driver.FindElement(By.XPath("/html/body/app-root/app-auth/app-auth-sign-in/div/div/form/div[2]/button")).Click();
 
             Thread.Sleep(3000);
         
@@ -60,50 +67,50 @@ namespace AutomationSWM
                 {
 
 
-                    driver.FindElement(By.XPath("//*[@id='dashboardItems']/div[2]/div/div[2]/div/a")).Click();
+                    b.driver.FindElement(By.XPath("//*[@id='dashboardItems']/div[2]/div/div[2]/div/a")).Click();
 
 
 
                     // choose OS
-                    driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
-                    driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
-                    driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
+                    b.driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
+                    b.driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
+                    b.driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
 
-                    driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
-                    driver.FindElement(By.Name("productionWeek")).SendKeys(v.ProductionWeek);
-                    driver.FindElement(By.Name("vehicleModelYear")).SendKeys(v.VehicleModelYear);
-                    driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
+                    b.driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
+                    b.driver.FindElement(By.Name("productionWeek")).SendKeys(v.ProductionWeek);
+                    b.driver.FindElement(By.Name("vehicleModelYear")).SendKeys(v.VehicleModelYear);
+                    b.driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
 
                     // choose Model Code 
-                    driver.FindElement(By.XPath("//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]")).Click();
+                    b.driver.FindElement(By.XPath("//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]")).Click();
 
                     // choose ABCD-EFG-P1!
-                    //  driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
+                    //  b.driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
 
                     // choose ABCD-EFG-P3
-                    driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(7) > div > span:nth-child(1)")).Click();
+                    b.driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(7) > div > span:nth-child(1)")).Click();
 
 
-                    //   driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
+                    //   b.driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
                     Thread.Sleep(2000);
 
 
 
 
                     WaitForSaveButtonUntilVisible:
-                    if (driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Enabled)
+                    if (b.driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Enabled)
                     {
-                        driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Click();
+                        b.driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Click();
                     }
                     else
                     {
                         goto WaitForSaveButtonUntilVisible;
                     }
 
-                    log.VINSuccedMessage(v, urlAdrr,DT );
+                    log.VINSuccedMessage(v, b.urlAdrr,b.DT );
 
 
-                driver.FindElement(By.XPath("//*[@id='wrapper']/app-topbar/nav/a/div")).Click();
+                b.driver.FindElement(By.XPath("//*[@id='wrapper']/app-topbar/nav/a/div")).Click();
 
 
             }
@@ -113,9 +120,9 @@ namespace AutomationSWM
 
 
 
-                    driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
+                    b.driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + b.DT + ".png", ImageFormat.Png);
                 
-                    log.ExceptionMessage(ex, "Add Vehicle Failure", v.VIN, urlAdrr, DT);
+                    log.ExceptionMessage(ex, "Add Vehicle Failure", v.VIN, b.urlAdrr, b.DT);
                     //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");
 
                 }
@@ -136,50 +143,50 @@ namespace AutomationSWM
             {
 
 
-                driver.FindElement(By.XPath("//*[@id='dashboardItems']/div[2]/div/div[2]/div/a")).Click();
+                b.driver.FindElement(By.XPath("//*[@id='dashboardItems']/div[2]/div/div[2]/div/a")).Click();
 
 
 
                 // choose OS
-                driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
-                driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
-                driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
+                b.driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
+                b.driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
+                b.driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
 
-                driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
-                driver.FindElement(By.Name("productionWeek")).SendKeys(v.ProductionWeek);
-                driver.FindElement(By.Name("vehicleModelYear")).SendKeys(v.VehicleModelYear);
-                driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
+                b.driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
+                b.driver.FindElement(By.Name("productionWeek")).SendKeys(v.ProductionWeek);
+                b.driver.FindElement(By.Name("vehicleModelYear")).SendKeys(v.VehicleModelYear);
+                b.driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
 
                 // choose Model Code 
-                driver.FindElement(By.XPath("//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]")).Click();
+                b.driver.FindElement(By.XPath("//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]")).Click();
 
                 // choose ABCD-EFG-P1!
-                //  driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
+                //  b.driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
 
                 // choose ABCD-EFG-P3
-                driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(5) > div > span:nth-child(1)")).Click();
+                b.driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(5) > div > span:nth-child(1)")).Click();
 
 
-                //   driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
+                //   b.driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
                 Thread.Sleep(2000);
 
 
 
 
                 WaitForSaveButtonUntilVisible:
-                if (driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Enabled)
+                if (b.driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Enabled)
                 {
-                    driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Click();
+                    b.driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Click();
                 }
                 else
                 {
                     goto WaitForSaveButtonUntilVisible;
                 }
 
-                log.VINSuccedMessage(v, urlAdrr, DT);
+                log.VINSuccedMessage(v, b.urlAdrr, b.DT);
 
 
-                driver.FindElement(By.XPath("//*[@id='wrapper']/app-topbar/nav/a/div")).Click();
+                b.driver.FindElement(By.XPath("//*[@id='wrapper']/app-topbar/nav/a/div")).Click();
 
 
             }
@@ -190,9 +197,9 @@ namespace AutomationSWM
 
                
 
-                driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
+                b.driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + b.DT + ".png", ImageFormat.Png);
 
-                log.ExceptionMessage(ex, "Add Vehicle Failure", v.VIN, urlAdrr, DT);
+                log.ExceptionMessage(ex, "Add Vehicle Failure", v.VIN, b.urlAdrr, b.DT);
                 //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");
 
             }
@@ -213,50 +220,50 @@ namespace AutomationSWM
             {
 
 
-                driver.FindElement(By.XPath("//*[@id='dashboardItems']/div[2]/div/div[2]/div/a")).Click();
+                b.driver.FindElement(By.XPath("//*[@id='dashboardItems']/div[2]/div/div[2]/div/a")).Click();
 
 
 
                 // choose OS
-                driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
-                driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
-                driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
+                b.driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
+                b.driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
+                b.driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
 
-                driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
-                driver.FindElement(By.Name("productionWeek")).SendKeys(v.ProductionWeek);
-                driver.FindElement(By.Name("vehicleModelYear")).SendKeys(v.VehicleModelYear);
-                driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
+                b.driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
+                b.driver.FindElement(By.Name("productionWeek")).SendKeys(v.ProductionWeek);
+                b.driver.FindElement(By.Name("vehicleModelYear")).SendKeys(v.VehicleModelYear);
+                b.driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
 
                 // choose Model Code 
-                driver.FindElement(By.XPath("//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]")).Click();
+                b.driver.FindElement(By.XPath("//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]")).Click();
 
                 // choose ABCD-EFG-P1!
-                //  driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
+                //  b.driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
 
                 // choose ABCD-EFG-P3
-                driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2) > div > span:nth-child(1)")).Click();
+                b.driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2) > div > span:nth-child(1)")).Click();
 
 
-                //   driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
+                //   b.driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
                 Thread.Sleep(2000);
 
 
 
 
                 WaitForSaveButtonUntilVisible:
-                if (driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Enabled)
+                if (b.driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Enabled)
                 {
-                    driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Click();
+                    b.driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Click();
                 }
                 else
                 {
                     goto WaitForSaveButtonUntilVisible;
                 }
 
-                log.VINSuccedMessage(v, urlAdrr, DT);
+                log.VINSuccedMessage(v, b.urlAdrr, b.DT);
 
 
-                driver.FindElement(By.XPath("//*[@id='wrapper']/app-topbar/nav/a/div")).Click();
+                b.driver.FindElement(By.XPath("//*[@id='wrapper']/app-topbar/nav/a/div")).Click();
 
 
             }
@@ -266,9 +273,9 @@ namespace AutomationSWM
 
 
 
-                driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
+                b.driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + b.DT + ".png", ImageFormat.Png);
 
-                log.ExceptionMessage(ex, "Add Vehicle Failure", v.VIN, urlAdrr, DT);
+                log.ExceptionMessage(ex, "Add Vehicle Failure", v.VIN, b.urlAdrr, b.DT);
                 //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");
 
             }
@@ -289,50 +296,50 @@ namespace AutomationSWM
             {
 
 
-                driver.FindElement(By.XPath("//*[@id='dashboardItems']/div[2]/div/div[2]/div/a")).Click();
+                b.driver.FindElement(By.XPath("//*[@id='dashboardItems']/div[2]/div/div[2]/div/a")).Click();
 
 
 
                 // choose OS
-                driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
-                driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
-                driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
+                b.driver.FindElement(By.Name("vin")).SendKeys(v.VIN);
+                b.driver.FindElement(By.Name("supplementaryId")).SendKeys(v.SupplementaryID);
+                b.driver.FindElement(By.Name("chassisNumber")).SendKeys(v.ChassisNumber);
 
-                driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
-                driver.FindElement(By.Name("productionWeek")).SendKeys(v.ProductionWeek);
-                driver.FindElement(By.Name("vehicleModelYear")).SendKeys(v.VehicleModelYear);
-                driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
+                b.driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
+                b.driver.FindElement(By.Name("productionWeek")).SendKeys(v.ProductionWeek);
+                b.driver.FindElement(By.Name("vehicleModelYear")).SendKeys(v.VehicleModelYear);
+                b.driver.FindElement(By.Name("plant")).SendKeys(v.Plant);
 
                 // choose Model Code 
-                driver.FindElement(By.XPath("//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]")).Click();
+                b.driver.FindElement(By.XPath("//div[contains(@class,'select-button-item placeHolderStyling truncated')][contains(text(),'Select Vehicle Model')]")).Click();
 
                 // choose ABCD-EFG-P1!
-                //  driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
+                //  b.driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(2)")).Click();
 
                 // choose ABCD-EFG-P3
-                driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(6) > div > span:nth-child(1)")).Click();
+                b.driver.FindElement(By.CssSelector("#filter-modelCode > app-input-select > div > div > ul > li:nth-child(6) > div > span:nth-child(1)")).Click();
 
 
-                //   driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
+                //   b.driver.FindElement(By.XPath("//span[contains(@class,'list-option-item-value truncated')][contains(text(),'ABCD-EFG-P5')]")).Click();
                 Thread.Sleep(2000);
 
 
 
 
                 WaitForSaveButtonUntilVisible:
-                if (driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Enabled)
+                if (b.driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Enabled)
                 {
-                    driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Click();
+                    b.driver.FindElement(By.XPath("//button[contains(@class,'new-form-btn save-btn')]")).Click();
                 }
                 else
                 {
                     goto WaitForSaveButtonUntilVisible;
                 }
 
-                log.VINSuccedMessage(v, urlAdrr, DT);
+                log.VINSuccedMessage(v, b.urlAdrr, b.DT);
 
 
-                driver.FindElement(By.XPath("//*[@id='wrapper']/app-topbar/nav/a/div")).Click();
+                b.driver.FindElement(By.XPath("//*[@id='wrapper']/app-topbar/nav/a/div")).Click();
 
 
             }
@@ -342,9 +349,9 @@ namespace AutomationSWM
 
 
 
-                driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + DT + ".png", ImageFormat.Png);
+                b.driver.TakeScreenshot().SaveAsFile(@"C:\Users\ravdaian\Documents\GitHub\Automation\AutomationSWM\AutomationSWM\Images\" + b.DT + ".png", ImageFormat.Png);
 
-                log.ExceptionMessage(ex, "Add Vehicle Failure", v.VIN, urlAdrr, DT);
+                log.ExceptionMessage(ex, "Add Vehicle Failure", v.VIN, b.urlAdrr, b.DT);
                 //rep.Fail("Add New SoftWare Failed", "New SoftWare Creation Failed");
 
             }
@@ -356,7 +363,7 @@ namespace AutomationSWM
         public void CloseBrowser()
         {
             //rep.EndReport();
-            driver.Close();
+            b.driver.Close();
         }
     }
 }

@@ -1546,3 +1546,15 @@ Message :Vehicle VIN-131594630693961016 Created Successfully
 TEST_ID: 131594630728356465 ---- http://d4-sprinters5.redbend.com:8080/harmanOTA/#/auth/sign-in -------Add New VIN Test  Date :1/3/2018 16:24:50----------------------------------------
 Message :Vehicle VIN-131594630872652253 Created Successfully 
 -----------------------------------------------------------------------------
+TEST_ID: 131594658081384788 ---- http://d4-sprinters5.redbend.com:8080/harmanOTA/#/auth/sign-in -------Add New VIN Test  Date :1/3/2018 17:10:25----------------------------------------
+Message :Vehicle VIN-131594658226063210 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131594658261236966 ---- http://d4-sprinters5.redbend.com:8080/harmanOTA/#/auth/sign-in -------Add New VIN Test  Date :1/3/2018 17:10:43----------------------------------------
+Message :Vehicle VIN-131594658403519773 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131594658438010498 ---- http://d4-sprinters5.redbend.com:8080/harmanOTA/#/auth/sign-in -------Add New VIN Test  Date :1/3/2018 17:11:01----------------------------------------
+Message :Vehicle VIN-131594658582182284 Created Successfully 
+-----------------------------------------------------------------------------
+TEST_ID: 131594658615986595 ---- http://d4-sprinters5.redbend.com:8080/harmanOTA/#/auth/sign-in -------Add New VIN Test  Date :1/3/2018 17:11:19----------------------------------------
+Message :Vehicle VIN-131594658760665356 Created Successfully 
+-----------------------------------------------------------------------------

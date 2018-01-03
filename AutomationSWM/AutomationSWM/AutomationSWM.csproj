@@ -91,6 +91,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Base.cs" />
     <Compile Include="Classes\Campaign.cs" />
     <Compile Include="Classes\CreateLogMessage.cs" />
     <Compile Include="Classes\Initializer.cs" />
