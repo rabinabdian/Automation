@@ -21,15 +21,16 @@ namespace AutomationSWM
         IWebDriver driver;
         string username = "swmuser";
         string password = "swmPassword1";
-        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters1);
+        string urlAdrr = SiteUrl.GetString(SiteUrl.url.d4sprinters5);
         string DT = DateTime.Now.ToFileTime().ToString();
         CreateLogMessage log = new CreateLogMessage();      
 
         [TestInitialize]
         public void Init()
         {
-          
-             driver = new ChromeDriver();
+            ChromeOptions option = new ChromeOptions();
+            option.AddArgument("--headless");
+            driver = new ChromeDriver(option);
            // driver = new PhantomJSDriver();
             driver.Navigate().GoToUrl(urlAdrr);
             driver.Manage().Window.Maximize();
